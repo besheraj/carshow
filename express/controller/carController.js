@@ -8,8 +8,8 @@ const addCar = async (req, res) => {
 
 
 const getAll = async (req, res) => {
-    const {sku,carName,carModel,price} = req.body;
-    const allCars = await getAllCars({sku,carName,carModel,price})
+    const {sku,carName,carModel,price, isSold} = req.query;
+    const allCars = await getAllCars({sku,carName,carModel,price,isSold})
     return res.json(allCars)
   };
 

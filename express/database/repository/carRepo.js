@@ -12,7 +12,6 @@ export async function getCars(filter) {
 } 
 
 export async function updateCar(id, data) {
-    console.log(data)
-    const updated = await Car.updateOne({id},{ $set: data})
+    const updated = await Car.updateOne({_id:id},{ $set: data})
     return updated
 }

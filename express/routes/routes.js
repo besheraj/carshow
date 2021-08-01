@@ -7,6 +7,6 @@ const router = Router();
 
 router.post("/car",asyncWrapper(carController.addCar))
 router.get("/car",asyncWrapper(carController.getAll))
-router.post("/car/sold/:id",asyncWrapper(carController.buyCar))
+router.put("/car/sold/:id",asyncWrapper(carController.buyCar))
 
 export default router

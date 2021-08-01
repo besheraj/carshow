@@ -30,7 +30,6 @@ export async function getAllCars(filter) {
     if (filter.isSold) {
       query = {...query, isSold: filter.isSold}
     }
-    console.log(query)
     const getAllCars = await getCars(query);
     return getAllCars;
   } catch (err) {
